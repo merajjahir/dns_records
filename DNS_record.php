@@ -11,6 +11,7 @@
     body{
         background-color: #bfcba8;
         height:150vh;
+        overflow-x: hidden;
     }
     ::selection {
 
@@ -21,6 +22,7 @@
         position: absolute;
         top: 1000px;
         left:0px;
+        
 
     }
     table {
@@ -34,21 +36,48 @@
         border: 2px solid #5b5b5b;
         text-align: left;
         padding: 5px;
+        
     }
-    #btn {
-        padding: 15px 10px;
-        border-radius: 40%;
-        background-color:#5b5b5b ;
-        color: #d8c292;
+    #domain{
+        position: relative;
+        left:20%;
+        top:50px;
+        
     }
+    #select{
+        font-size: 1.2em;
+    }
+    span{
+        font-size: 1.2em;
+        margin-right:5px ;
+    }
+    
+    input{
+        outline: none;
+        color: #5b5b5b;
+        background-color: #bfcba8;
+        font-size:1.2em;
+        border-radius: 5%;
+    }
+ 
     body ul li{
         list-style-type: none;
         display: inline-block;
         border: 5px 5px solid black;
         position: relative;
-        top:100px;
+        top:-10px;
         left:00px;
         margin-left: 10px;
+    }
+    #btn {
+        position:absolute;
+        top:40%;
+        left:3%;
+        margin-top: 130px;
+        padding: 15px 10px;
+        border-radius: 40%;
+        background-color:#5b5b5b ;
+        color: #d8c292;
     }
 
     #rohim {
@@ -109,7 +138,7 @@ echo "<br>";
 
 <form method="POST" >
     
-    DOMAIN-NAME : <input type="text" name="domian_name">
+    <h3 id="domain"> THE DOMAIN-NAME : <input type="text" name="domian_name"> </h3>
     <br>
     <!-- DNS-RECORD : <input type="text" name="dns_record"> -->
     <br>
@@ -119,8 +148,11 @@ echo "<br>";
     <br>
 
     <ul>
-
+    <h4 id="select"><u>SELECT THE RECORD'S: </u></h4>
+    <br>
+    <br>
         <li>
+        
         <input  type='checkbox' value='1'name='MX' ><span>MX</span> 
         </li>
 
